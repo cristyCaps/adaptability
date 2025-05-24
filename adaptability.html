@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Student Flexibility Predictor</title>
+  
+  <!-- Optional: Prevent favicon error or link to a real favicon -->
+  <link rel="icon" href="data:,">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <div id="intro">
+    <h1>Welcome to Student Adaptability Predictor</h1>
+
+    <p>Answer the following questions to find out how capable you are of adapting to the flexibility of online learning.</p>
+    <button id="getStartedButton">
+      <span class="material-icons">play_arrow</span>Get Started</button>
+  </div>
+
+  <div id="formContainer" style="display:none;">
+    <!-- Step 1: Personal Info -->
+    <div id="personalInfo">
+      <h2>Personal Information</h2>
+      <label>Age:</label>
+      <input type="number" id="age" min="1" required />
+
+      <label>Gender:</label>
+      <label><input type="radio" name="gender" value="0" /> Female</label>
+      <label><input type="radio" name="gender" value="1" /> Male</label>
+
+      <button id="nextPersonalInfo"><span class="material-icons">navigate_next</span>Next</button>
+    </div>
+
+    <!-- Step 2: Education Info -->
+    <div id="educationInfo" style="display:none;">
+      <h2>Education & Access</h2>
+
+      <label>Education Level:</label>
+      <label><input type="radio" name="education_level" value="0" /> School</label>
+      <label><input type="radio" name="education_level" value="1" /> College</label>
+      <label><input type="radio" name="education_level" value="2" /> University</label>
+
+      <label>Institution Type:</label>
+      <label><input type="radio" name="institution_type" value="0" /> Private</label>
+      <label><input type="radio" name="institution_type" value="1" /> Public</label>
+
+      <label>Are you an IT student?</label>
+      <label><input type="radio" name="it_student" value="1" /> Yes</label>
+      <label><input type="radio" name="it_student" value="0" /> No</label>
+
+      <label>Location:</label>
+      <label><input type="radio" name="location" value="0" /> Urban</label>
+      <label><input type="radio" name="location" value="1" /> Rural</label>
+
+      <button id="nextEducationInfo"> <span class="material-icons">navigate_next</span>Next</button>
+    </div>
+
+    <!-- Step 3: Technology Info -->
+    <div id="prediction" style="display:none;">
+      <h2>Technology and Network Info</h2>
+
+      <label>Device Used:</label>
+      <label><input type="radio" name="device" value="0" /> Smartphone</label>
+      <label><input type="radio" name="device" value="1" /> Laptop</label>
+      <label><input type="radio" name="device" value="2" /> Tablet</label>
+
+      <label>Financial Condition:</label>
+      <label><input type="radio" name="financial_condition" value="0" /> Good</label>
+      <label><input type="radio" name="financial_condition" value="1" /> Poor</label>
+
+      <label>Network Type:</label>
+      <label><input type="radio" name="internet_type" value="0" /> 2G</label>
+      <label><input type="radio" name="internet_type" value="1" /> 3G</label>
+      <label><input type="radio" name="internet_type" value="2" /> 4G</label>
+
+      <label>Internet Type:</label>
+      <label><input type="radio" name="network_type" value="0" /> Mobile Data</label>
+      <label><input type="radio" name="network_type" value="1" /> Wifi</label>
+
+      <button id="seeResultButton"><span class="material-icons">insights</span>See Result</button>
+    </div>
+
+    <!-- Final Result Display -->
+    <div id="resultDisplay" style="display:none;">
+      <h2>Prediction Result</h2>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <!-- JS includes: ORDER IS IMPORTANT -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="api.js"></script> <!-- Must be before script.js -->
+  <script src="script.js"></script>
+</body>
+</html>

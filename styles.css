@@ -1,0 +1,120 @@
+/* Import Material Icons */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #baf3fa, #90f0f7);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Centered Container */
+#formContainer,
+#intro {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Titles */
+h1, h2 {
+  text-align: center;
+  color: #00796b;
+}
+p{
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin: 20px auto 0;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+button .material-icons {
+  font-size: 20px;
+}
+
+/* Inputs */
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+}
+
+input[type="number"],
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #00796b;
+  box-shadow: 0 0 5px #80cbc4;
+}
+
+/* Radio Buttons Grouping */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.radio-group label {
+  background: #e0f2f1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.radio-group label:hover {
+  background: #b2dfdb;
+}
+
+/* Result Section */
+#resultDisplay {
+  text-align: center;
+  background-color: #e0f2f1;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#result {
+  font-size: 1.3em;
+  color: #004d40;
+  margin-top: 15px;
+}
