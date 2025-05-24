@@ -48,4 +48,4 @@ def predict_adaptability():
         return jsonify({"error": "An error occurred during the prediction process."}), 500
 
 if __name__ == '__main__':
-    api.run(port=8000, debug=True)
+    api.run(host='0.0.0.0', debug=True)
